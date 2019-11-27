@@ -4,11 +4,12 @@
 
 Then, presuming you are using GCC, type gcc -o hello hello.c. This tells gcc to compile your hello.c program into a form the machine can execute. The '-o hello' tells it to call the compiled program 'hello'.
 
-## STEPS: Running on Linux
+## Compiling and Executing on Linux
     gcc -o hello hello.c //compile with your terminal
     ls // check if there's an exacutable file listed
-    ./hello // execute the exec file 🔥
-    
+    ./hello // execute the exec file
+#### For Windows use [Dev-C++] (https://sourceforge.net/projects/orwelldevcpp/) and for Mac OS [Code::Blocks] (https://sourceforge.net/projects/codeblocks/) 
+
 ## TAKES ✔
 * #include ```<stdio.h>``` tells the C compiler to find the standard header called ```<stdio.h>``` and add it to this program. In C, you often have to pull in extra optional components when you need them.
 * " argv" , or "pointer to pointers" , is the same as ```*x[]``` or "array of pointers"; and "exit(0)" does the same as ```return 0``` for the main function.
