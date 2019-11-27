@@ -8,7 +8,8 @@ Then, presuming you are using GCC, type gcc -o hello hello.c. This tells gcc to 
     gcc -o hello hello.c //compile with your terminal
     ls // check if there's an exacutable file listed
     ./hello // execute the exec file
-#### For Windows use [Dev-C++] (https://sourceforge.net/projects/orwelldevcpp/) and for Mac OS [Code::Blocks] (https://sourceforge.net/projects/codeblocks/) 
+For Windows use [Dev-C++](https://sourceforge.net/projects/orwelldevcpp/) and for Mac OS [Code::Blocks](https://sourceforge.net/projects/codeblocks/) 
+ 
 
 ## TAKES ✔
 * #include ```<stdio.h>``` tells the C compiler to find the standard header called ```<stdio.h>``` and add it to this program. In C, you often have to pull in extra optional components when you need them.
