@@ -155,3 +155,53 @@ int main(void)
 
 * The values of non-volatile variables may be corrupted when setjmp returns from a longjmp call.
 While ```setjmp()``` and ```longjmp()``` may be used for error handling, it is generally preferred to use the return value of a function to indicate an error, if possible.
+
+### VARIABLES. 
+Simply names used to refer to some location in memory, a location that holds a value with which we are working.
+ * So, if you have a variable i that is initialized (set equal) to 4, then it follows that i+1 will equal 5 eg ```some_number=3;```
+ * Declaring variables is the way in which a C program shows the number of variables it needs, what they are going to be named, and how much memory they will need eg ```int some_number;```
+
+### BASIC DATA TYPES
+#### int Type.
+The int type stores integers in the form of "whole numbers" which is is typically the size of one machine word, which on most modern home PCs is 32 bits (4 octets). Example ```int numberOfStudents, i, j=5;```
+#### char Type.
+The char type is capable of holding any member of the execution character set. It stores the same kind of data as an int (i.e. integers), but typically has a size of one byte. The size of a byte is specified by the macro CHAR_BIT which specifies the number of bits in a char (byte). Examples of character literals are ```'a', 'b', '1'. etc``` and ```char letter1 = 'a';```
+#### float Type.
+float is short for floating point. float literals must be suffixed with F or f, otherwise they will be interpreted as doubles.
+Examples are: 3.1415926f, 4.0f, 6.022e+23f. float variables can be declared using the float keyword. ```float nums=12.45;```
+
+#### double Type.
+double keyword allows you to store double-precision floating point numbers, real numbers, in other words, both integer and non-integer values. Its size is typically two machine words, or 8 bytes on most machines. Examples of double literals are 3.1415926535897932, 4.0, 6.022e+23 (scientific notation 5 ) and are declared as ```double```
+
+### sizeof. 
+If you have any doubts as to the amount of memory actually used by any variable, you can use the sizeof operator to find out for sure. Its syntax is: ```size_t size;   int i;    size = sizeof(i);```
+
+### const qualifier. 
+When the const qualifier is used, the declared variable must be initialized at declaration. It is then not allowed to be changed.
+
+### * define. 
+- When you write programs, you can create what is known as a macro, so when the computer is reading your code, it will replace all instances of a word with the specified expression. Here's an example. If you write ```#define PRICE_OF_CORN 0.99```
+### * static.
+- It's sometimes a useful keyword. It is a common misbelief that the only purpose is to make a variable stay in memory. When you declare a function or global variable as static it will become internal. You cannot access the function or variable through the extern (see below) keyword from other files in your project.
+
+### * register. 
+- Is a hint to the compiler to attempt to optimize the storage of the given variable by storing it in a register of the computer's CPU when the program is run. Most optimizing compilers do this anyway, so use of this keyword is often unnecessary. In fact, ANSI C states that a compiler can ignore this keyword if it so desires – and many do. Microsoft Visual C++ is an example of an implementation that completely ignores the register keyword.
+
+### Placeholder codes. 
+The printf function is a powerful function, and is probably the most-used function in C programs.
+For example, ```int main(void) { printf("19+31 is "); }``` but damn! ```printf``` only prints strings! Thankfully, ```printf``` has methods for printing numbers. What we do is put a placeholder format code in the string. We write: ```printf("19+31 is %d", 19+31);```. The placeholder %d literally "holds the place" for the actual number that is the result of adding 19 to 31.
+#### These placeholders are called format specifiers.
+```
+• %d - int (same as %i)
+• %ld - long int (same as %li)
+• %f - float
+• %lf - double
+• %c - char
+• %s - string
+• %x - hexadecimal
+```
+
+### Input using scanf(). 
+The ```scanf()``` function is the input method equivalent to the ```printf()``` output function, simple yet powerful. The ```scanf()``` function requires the memory address of the variable to which you want to save the input value which uses the simple technique is to use the ```address-of operator, &```.
+#### Note on inputs:
+When data is typed at a keyboard, the information does not go straight to the program that is running. It is first stored in what is known as a buffer - a small amount of memory reserved for the input source.
