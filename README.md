@@ -1,6 +1,6 @@
 # C 🔥
 
-## Learning C basic concepts and hands on problem solving with algorithm in C  😎 
+## Learning C basic concepts and hands on problem solving with data structures and algorithms in C  😎 
 
 Then, presuming you are using GCC, type gcc -o hello hello.c. This tells gcc to compile your hello.c program into a form the machine can execute. The '-o hello' tells it to call the compiled program 'hello'.
 
